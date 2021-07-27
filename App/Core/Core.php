@@ -13,7 +13,11 @@ class Core {
     if(!class_exists($controller)){
       $controller = "ErroController";
     }
+    if(isset($urlGet['id']) && $urlGet['id'] != null){
+      call_user_func_array(array(new $controller, $acao), array('id' => $urlGet['id']));
+    }else{
+      call_user_func_array(array(new $controller, $acao), array());
+    }
     
-    call_user_func_array(array(new $controller, $acao), array());
   }
 }
