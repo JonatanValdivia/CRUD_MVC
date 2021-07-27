@@ -1,14 +1,15 @@
-<link rel="stylesheet" href="App/CSS/styleEstrutura.css">
+<link rel="stylesheet" href="CSS/styleEstrutura.css">
 <?php
 
-require_once './App/Core/Core.php';
-require_once './App/Controller/HomeController.php';
-require_once './App/Controller/ErroController.php';
-require_once './App/Model/Postagem.php';
-require_once './Lib/DataBase/Connection.php';
+require_once './Core/Core.php';
+require_once './Controller/HomeController.php';
+require_once './Controller/ErroController.php';
+require_once './Model/Postagem.php';
+require_once '../Lib/DataBase/Connection.php';
 
+require_once '../vendor/autoload.php';
 
-$template = file_get_contents('App/Template/estrutura.html');
+$template = file_get_contents('Template/estrutura.html');
 
 ob_start();
   $core = new Core;

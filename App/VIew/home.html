@@ -1,33 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HOME</title>
-</head>
-<body>
-  <div id="corpo">
-    <div id="topo">
-      <header>
-        <nav>
-          <a href="#">HOME</a> |
-          <a href="#">SOBRE</a>
-        </nav>
-      </header>
-    </div>
-    <hr>
-    <div id="conteudo">
-      {{area_dinâmica}}
-      <section>
-        <h1>Postagens:</h1>
-        <article>
-          <header>
-            <h2><a href="">Titulo da postagem</a></h2>
-          </header>
-          <p>Conteúdo da postagem</p>
-      </section>
-    </div>
-  </div>
-</body>
-</html>
+
+<section>
+  <h1>Postagens:</h1>
+  <!-- postagens é a chava da $parametros de HomeController -->
+  {% for postagem in postagens %}<!-- seria um for para renderização dos dados  -->
+  
+  <article>
+    <header>
+      <h2><a href="">{{postagem.titulo}}</a></h2>
+                           <!-- titulo: é o campo da tabela postagens -->
+    </header>
+    <p>{{postagem.conteudo}} | {{postagem.idPostagem}}</p>
+    <p>Créditos: {{nome}}</p>
+  </article>
+  {% endfor %}
+</section>
+   

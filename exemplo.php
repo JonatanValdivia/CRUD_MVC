@@ -6,5 +6,3 @@
 		Retorno:
 		array(2) { ["nome"]=> string(7) "Jonatan" ["idade"]=> string(2) "17" }
 	*/
-
-?>
